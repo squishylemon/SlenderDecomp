@@ -12,7 +12,7 @@ public class StaticScript : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Color color = base.renderer.material.color;
+		Color color = base.GetComponent<Renderer>().material.color;
 		if (!view.lost)
 		{
 			if (view.flicker <= 0)
@@ -32,7 +32,7 @@ public class StaticScript : MonoBehaviour
 		{
 			color.a = 0f;
 		}
-		base.renderer.material.color = color;
-		base.renderer.material.mainTextureOffset = new Vector2(Random.value, Random.value);
+		base.GetComponent<Renderer>().material.color = color;
+		base.GetComponent<Renderer>().material.mainTextureOffset = new Vector2(Random.value, Random.value);
 	}
 }

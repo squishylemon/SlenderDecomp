@@ -15,7 +15,7 @@ public class PickupPage : MonoBehaviour
 	private void Update()
 	{
 		RaycastHit hitInfo;
-		if (base.renderer.isVisible)
+		if (base.GetComponent<Renderer>().isVisible)
 		{
 			if ((double)Vector3.Distance(base.transform.position, player.position) <= 2.0)
 			{

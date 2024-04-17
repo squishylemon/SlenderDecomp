@@ -5620,6 +5620,7 @@ GameObject:
   - 4: {fileID: 672}
   - 114: {fileID: 1394}
   - 154: {fileID: 1341}
+  - 218: {fileID: 1395}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -9119,7 +9120,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295}
-  m_LocalRotation: {x: -.438325644, y: .500874162, z: -.54765892, w: -.507016063}
+  m_LocalRotation: {x: -.438325673, y: .500874221, z: -.54765898, w: -.507016122}
   m_LocalPosition: {x: 225.635864, y: 1.85842037, z: 185.514679}
   m_LocalScale: {x: .300000042, y: .00200000009, z: .449999958}
   m_Children: []
@@ -9326,7 +9327,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308}
-  m_LocalRotation: {x: .357854515, y: .549572825, z: -.60846597, w: .446854532}
+  m_LocalRotation: {x: .357854545, y: .549572885, z: -.608466029, w: .446854562}
   m_LocalPosition: {x: 310.007172, y: 1.71250606, z: 239.479477}
   m_LocalScale: {x: .300000012, y: .00200000009, z: .449999958}
   m_Children: []
@@ -30960,12 +30961,12 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Padding:
+    m_Margin:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Margin:
+    m_Padding:
       m_Left: 0
       m_Right: 0
       m_Top: 0
@@ -30976,17 +30977,17 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_ImagePosition: 0
-    m_Alignment: 1
-    m_WordWrap: 0
-    m_TextClipping: 1
-    m_ContentOffset: {x: 0, y: 0}
-    m_ClipOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
     m_FontSize: 25
     m_FontStyle: 0
-    m_StretchWidth: 1E-45
+    m_Alignment: 1
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 1
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
     m_StretchHeight: 0
   mainview: {fileID: 678}
   spotlight: {fileID: 665}
@@ -31146,12 +31147,12 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Padding:
+    m_Margin:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Margin:
+    m_Padding:
       m_Left: 0
       m_Right: 0
       m_Top: 0
@@ -31162,17 +31163,17 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_ImagePosition: 0
-    m_Alignment: 1
-    m_WordWrap: 0
-    m_TextClipping: 1
-    m_ContentOffset: {x: 0, y: 0}
-    m_ClipOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
     m_FontSize: 25
     m_FontStyle: 0
-    m_StretchWidth: 1E-45
+    m_Alignment: 1
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 1
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
     m_StretchHeight: 0
   quitted: 0
   sun: {fileID: 1310}
@@ -31369,12 +31370,12 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Padding:
+    m_Margin:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Margin:
+    m_Padding:
       m_Left: 0
       m_Right: 0
       m_Top: 0
@@ -31385,17 +31386,17 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
-    m_ImagePosition: 0
-    m_Alignment: 1
-    m_WordWrap: 0
-    m_TextClipping: 1
-    m_ContentOffset: {x: 0, y: 0}
-    m_ClipOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
     m_FontSize: 25
     m_FontStyle: 1
-    m_StretchWidth: 1E-45
+    m_Alignment: 1
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 1
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
     m_StretchHeight: 0
   fadeoutgui: 0
   ml1: {fileID: 1390}
@@ -31422,7 +31423,7 @@ MonoBehaviour:
   sprintcooldown: 0
   sprscr: {fileID: 1391}
   paused: 0
-  targetfog: 0.02
+  targetfog: .0199999996
   amrunning: 0
   cranking: 0
   cranksound: {fileID: 1302}
@@ -31506,7 +31507,7 @@ MonoBehaviour:
     baseHeight: 1
     extraHeight: 1
     perpAmount: 0
-    steepPerpAmount: 0.5
+    steepPerpAmount: .5
   movingPlatform:
     enabled: 1
     movementTransfer: 2
@@ -31514,7 +31515,7 @@ MonoBehaviour:
     enabled: 1
     slidingSpeed: 10
     sidewaysControl: 1
-    speedControl: 0.4
+    speedControl: .400000006
 --- !u!114 &1390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31591,17 +31592,36 @@ MonoBehaviour:
   m_Script: {fileID: 1373755677, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!218 &1395
+Terrain:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346}
+  m_Enabled: 1
+  serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: ec338889d352c124b87ae52e5a3aebcc, type: 2}
-  m_TreeDistance: 2000
-  m_TreeBillboardDistance: 80
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 160
+  m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 1
-  m_SplatMapDistance: 40
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
-  m_LightmapIndex: -1
-  m_LightmapSize: 1024
+  m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialType: 0
+  m_LegacySpecular:
+    serializedVersion: 2
+    rgba: 4286545791
+  m_LegacyShininess: .078125
+  m_UseDefaultSmoothness: 1
+  m_DefaultSmoothness: 0
+  m_MaterialTemplate: {fileID: 0}
+  m_BakeLightProbesForTrees: 1
+  m_ScaleInLightmap: 1
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}

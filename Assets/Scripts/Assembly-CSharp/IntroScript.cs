@@ -87,7 +87,7 @@ public class IntroScript : MonoBehaviour
 		Screen.lockCursor = false;
 		view.fadeoutgui = 400;
 		mainview.enabled = false;
-		base.camera.enabled = true;
+		base.GetComponent<Camera>().enabled = true;
 		if (PlayerPrefs.HasKey("minvert"))
 		{
 			if (PlayerPrefs.GetInt("minvert") == 1)
@@ -289,8 +289,8 @@ public class IntroScript : MonoBehaviour
 				}
 				else
 				{
-					stat1.renderer.enabled = false;
-					stat2.renderer.enabled = false;
+					stat1.GetComponent<Renderer>().enabled = false;
+					stat2.GetComponent<Renderer>().enabled = false;
 				}
 				if (view.dustyair && !view.daytime)
 				{
@@ -667,7 +667,7 @@ public class IntroScript : MonoBehaviour
 			return;
 		}
 		mainview.enabled = true;
-		base.camera.enabled = false;
+		base.GetComponent<Camera>().enabled = false;
 		view.fadeoutgui = 0;
 		if (!view.daytime)
 		{

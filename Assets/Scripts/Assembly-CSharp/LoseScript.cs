@@ -39,10 +39,10 @@ public class LoseScript : MonoBehaviour
 	private void Start()
 	{
 		nightsky = RenderSettings.skybox;
-		base.transform.parent.camera.enabled = false;
-		Color color = base.renderer.material.color;
+		base.transform.parent.GetComponent<Camera>().enabled = false;
+		Color color = base.GetComponent<Renderer>().material.color;
 		color.a = 0.4f;
-		base.renderer.material.color = color;
+		base.GetComponent<Renderer>().material.color = color;
 	}
 
 	private void OnGUI()
@@ -153,7 +153,7 @@ public class LoseScript : MonoBehaviour
 		if (timeleft == 0)
 		{
 			original.enabled = false;
-			base.transform.parent.camera.enabled = true;
+			base.transform.parent.GetComponent<Camera>().enabled = true;
 			oldposition = player.position;
 			player.position = new Vector3(0f, -2000f, 0f);
 			RenderSettings.ambientLight = Color.black;
@@ -164,7 +164,7 @@ public class LoseScript : MonoBehaviour
 			}
 			view.dust.Stop();
 		}
-		base.renderer.material.mainTextureOffset = new Vector2(Random.value, Random.value);
+		base.GetComponent<Renderer>().material.mainTextureOffset = new Vector2(Random.value, Random.value);
 		if (timeleft < 20 || timeleft > 120)
 		{
 			onthistime = false;
@@ -228,14 +228,14 @@ public class LoseScript : MonoBehaviour
 				view.dust.Play();
 			}
 			original.enabled = true;
-			base.transform.parent.camera.enabled = false;
+			base.transform.parent.GetComponent<Camera>().enabled = false;
 			player.position = oldposition;
 			player.LookAt(new Vector3(view.endfix.position.x, player.position.y, view.endfix.position.z));
 		}
 		if (timeleft >= 950 && view.pages >= 8)
 		{
 			original.enabled = false;
-			base.transform.parent.camera.enabled = true;
+			base.transform.parent.GetComponent<Camera>().enabled = true;
 			l1.intensity = 0f;
 			l2.intensity = 0f;
 			sun.enabled = false;

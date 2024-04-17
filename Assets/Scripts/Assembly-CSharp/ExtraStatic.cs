@@ -6,15 +6,15 @@ public class ExtraStatic : MonoBehaviour
 
 	private void Start()
 	{
-		Color color = base.renderer.material.color;
+		Color color = base.GetComponent<Renderer>().material.color;
 		color.a = 0.25f;
-		base.renderer.material.color = color;
+		base.GetComponent<Renderer>().material.color = color;
 	}
 
 	private void FixedUpdate()
 	{
 		Vector3 localPosition = base.transform.localPosition;
-		base.renderer.material.mainTextureOffset = new Vector2(Random.value, Random.value);
+		base.GetComponent<Renderer>().material.mainTextureOffset = new Vector2(Random.value, Random.value);
 		if (top)
 		{
 			if (Random.value > 0.5f)
@@ -51,7 +51,7 @@ public class ExtraStatic : MonoBehaviour
 			}
 		}
 		base.transform.localPosition = localPosition;
-		Color color = base.renderer.material.color;
+		Color color = base.GetComponent<Renderer>().material.color;
 		if (Random.value > 0.5f)
 		{
 			color.a += 0.02f;
@@ -68,6 +68,6 @@ public class ExtraStatic : MonoBehaviour
 				color.a = 0.05f;
 			}
 		}
-		base.renderer.material.color = color;
+		base.GetComponent<Renderer>().material.color = color;
 	}
 }

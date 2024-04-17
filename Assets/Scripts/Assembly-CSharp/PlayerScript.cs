@@ -713,7 +713,7 @@ public class PlayerScript : MonoBehaviour
 				{
 					zsound.volume = 0f;
 				}
-				base.camera.fieldOfView = zoom;
+				base.GetComponent<Camera>().fieldOfView = zoom;
 				statscale.localScale = new Vector3((zoom - 2.5f) / 57.5f, (zoom - 2.5f) / 57.5f, (zoom - 2.5f) / 57.5f);
 				if (stamina < 30f)
 				{
