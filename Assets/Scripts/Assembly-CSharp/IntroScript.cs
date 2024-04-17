@@ -74,6 +74,12 @@ public class IntroScript : MonoBehaviour
 
 	public bool infomenu;
 
+	public GameObject startGameButtonUI;
+	public GameObject extrasButtonUI;
+	public GameObject quitButtonUI;
+	public GameObject optionsButtonUI;
+	public GameObject slenderMythosButtonUI;
+
 	private void Start()
 	{
 		sk1.enableEmission = true;
@@ -242,7 +248,95 @@ public class IntroScript : MonoBehaviour
 		}
 	}
 
-	private void OnGUI()
+	public void startGameClicked()
+	{
+        view.flashlight.Play();
+        gamestarted = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        entry = Random.Range(4, 16);
+        if (view.mh)
+        {
+            timer = 200;
+        }
+        else
+        {
+            stat1.GetComponent<Renderer>().enabled = false;
+            stat2.GetComponent<Renderer>().enabled = false;
+        }
+        if (view.dustyair && !view.daytime)
+        {
+            view.dust.Play();
+        }
+        sk1.enableEmission = false;
+        sk1.Clear();
+        sk2.enableEmission = false;
+        sk2.Clear();
+        sk3.enableEmission = false;
+        sk3.Clear();
+        sk4.enableEmission = false;
+        sk4.Clear();
+        sk5.enableEmission = false;
+        sk5.Clear();
+        sk6.enableEmission = false;
+        sk6.Clear();
+        sk7.enableEmission = false;
+        sk7.Clear();
+        sk8.enableEmission = false;
+        sk8.Clear();
+        toptitle.transform.Rotate(new Vector3(180f, 0f, 0f));
+        thememusic.Stop();
+        switch (fltype)
+        {
+            case 1:
+                flsource.type = LightType.Point;
+                flsource.range = 20f;
+                flsource.color = new Color(0.4f, 1f, 0.6f);
+                break;
+            case 2:
+                flsource.spotAngle = 80f;
+                break;
+        }
+    }
+
+	public void QuitButton()
+	{
+        view.flashlight.Play();
+        Application.Quit();
+        view.backedup = false;
+    }
+	public void creditsButton()
+	{
+        thememusic.Stop();
+        view.flashlight.Play();
+        view.mh = false;
+        view.lost = true;
+        view.pages = 8;
+        view.endgame.timeleft = 950;
+        view.fadeinmusic = 0f;
+        gamestarted = true;
+        timer = 1600;
+    }
+
+	public void extrasButton()
+	{
+		view.flashlight.Play();
+        extmenu = true;
+    }
+
+    public void optionsButton()
+    {
+        view.flashlight.Play();
+        optmenu = true;
+    }
+
+    public void slendermythosButton()
+    {
+        view.flashlight.Play();
+        mythosmenu = true;
+
+    }
+    private void OnGUI()
 	{
 		if (view.mh)
 		{
@@ -278,90 +372,8 @@ public class IntroScript : MonoBehaviour
 		GUI.Box(new Rect(150f, 35f, 300f, 300f), string.Empty);
 		if (!optmenu && !extmenu && !mythosmenu)
 		{
-			if (GUI.Button(new Rect(210f, 50f, 180f, 40f), "Start game"))
-			{
-				view.flashlight.Play();
-				gamestarted = true;
-				Cursor.lockState = CursorLockMode.None;
-				Cursor.visible = true;
-				entry = Random.Range(4, 16);
-				if (view.mh)
-				{
-					timer = 200;
-				}
-				else
-				{
-					stat1.GetComponent<Renderer>().enabled = false;
-					stat2.GetComponent<Renderer>().enabled = false;
-				}
-				if (view.dustyair && !view.daytime)
-				{
-					view.dust.Play();
-				}
-				sk1.enableEmission = false;
-				sk1.Clear();
-				sk2.enableEmission = false;
-				sk2.Clear();
-				sk3.enableEmission = false;
-				sk3.Clear();
-				sk4.enableEmission = false;
-				sk4.Clear();
-				sk5.enableEmission = false;
-				sk5.Clear();
-				sk6.enableEmission = false;
-				sk6.Clear();
-				sk7.enableEmission = false;
-				sk7.Clear();
-				sk8.enableEmission = false;
-				sk8.Clear();
-				toptitle.transform.Rotate(new Vector3(180f, 0f, 0f));
-				thememusic.Stop();
-				switch (fltype)
-				{
-				case 1:
-					flsource.type = LightType.Point;
-					flsource.range = 20f;
-					flsource.color = new Color(0.4f, 1f, 0.6f);
-					break;
-				case 2:
-					flsource.spotAngle = 80f;
-					break;
-				}
-			}
-			if (GUI.Button(new Rect(210f, 100f, 180f, 40f), "Slender Man Mythos"))
-			{
-				view.flashlight.Play();
-				mythosmenu = true;
-			}
-			if (GUI.Button(new Rect(210f, 150f, 85f, 40f), "Options"))
-			{
-				view.flashlight.Play();
-				optmenu = true;
-			}
-			if (GUI.Button(new Rect(305f, 150f, 85f, 40f), "Extras"))
-			{
-				view.flashlight.Play();
-				extmenu = true;
-			}
-			if (GUI.Button(new Rect(210f, 200f, 180f, 40f), "Credits"))
-			{
-				thememusic.Stop();
-				view.flashlight.Play();
-				view.mh = false;
-				view.lost = true;
-				view.pages = 8;
-				view.endgame.timeleft = 950;
-				view.fadeinmusic = 0f;
-				gamestarted = true;
-				timer = 1600;
-			}
-			if (GUI.Button(new Rect(210f, 250f, 180f, 40f), "Quit") || view.backedup)
-			{
-				view.flashlight.Play();
-				Application.Quit();
-				view.backedup = false;
-			}
-		}
+		
+        }
 		else if (mythosmenu)
 		{
 			if (!youtubemenu && !infomenu)
@@ -636,7 +648,16 @@ public class IntroScript : MonoBehaviour
 
 	private void Update()
 	{
-		if (!gamestarted && Input.GetKeyDown(KeyCode.Escape))
+        if (!optmenu && !extmenu && !mythosmenu)
+        {
+            startGameButtonUI.SetActive(true);
+            quitButtonUI.SetActive(true);
+            extrasButtonUI.SetActive(true);
+            optionsButtonUI.SetActive(true);
+            slenderMythosButtonUI.SetActive(true);
+        }
+
+        if (!gamestarted && Input.GetKeyDown(KeyCode.Escape))
 		{
 			if (optmenu)
 			{
