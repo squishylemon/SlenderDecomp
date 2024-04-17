@@ -83,7 +83,7 @@ public class DepthOfFieldScatter : PostEffectsBase
 			Graphics.Blit(source, destination);
 			return;
 		}
-		int num = 0;
+		//int num = 0;
 		float num2 = maxBlurSize;
 		int num3 = ((blurResolution == BlurResolution.High) ? 1 : 2);
 		if (!(aperture >= 0f))
@@ -96,7 +96,7 @@ public class DepthOfFieldScatter : PostEffectsBase
 		}
 		focalSize = Mathf.Clamp(focalSize, 0f, 0.3f);
 		focalDistance01 = ((!focalTransform) ? FocalDistance01(focalLength) : (GetComponent<Camera>().WorldToViewportPoint(focalTransform.position).z / GetComponent<Camera>().farClipPlane));
-		bool flag = source.format == RenderTextureFormat.ARGBHalf;
+		//bool flag = source.format == RenderTextureFormat.ARGBHalf;
 		RenderTexture renderTexture = ((num3 <= 1) ? null : RenderTexture.GetTemporary(source.width / num3, source.height / num3, 0, source.format));
 		if ((bool)renderTexture)
 		{

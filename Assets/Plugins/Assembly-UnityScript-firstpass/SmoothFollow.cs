@@ -36,10 +36,10 @@ public class SmoothFollow : MonoBehaviour
 			Quaternion quaternion = Quaternion.Euler(0f, y2, 0f);
 			transform.position = target.position;
 			transform.position -= quaternion * Vector3.forward * distance;
-			float y4 = y3;
-			Vector3 position = transform.position;
-			float num = (position.y = y4);
-			Vector3 vector2 = (transform.position = position);
+			//float y4 = y3;
+			//Vector3 position = transform.position;
+			//float num = (position.y = y4);
+			//Vector3 vector2 = (transform.position = position);
 			transform.LookAt(target);
 		}
 	}

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Optimized Leaf Material_2
-  m_Shader: {fileID: 4800000, guid: a8ed5902b99e28844892854f98eb0312, type: 3}
+  m_Shader: {fileID: 10511, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -18,7 +18,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: c398fecbe753a94468b398d26bbe989d, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -46,11 +46,23 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: .300000012
+        second: .458000004
       data:
         first:
           name: _SquashAmount
         second: 1
+      data:
+        first:
+          name: _BaseLight
+        second: 0
+      data:
+        first:
+          name: _AO
+        second: 4.82999992
+      data:
+        first:
+          name: _Occlusion
+        second: 7.5
       data:
         first:
           name: _TranslucencyViewDependency
@@ -71,6 +83,14 @@ Material:
       data:
         first:
           name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TreeInstanceColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TreeInstanceScale
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:

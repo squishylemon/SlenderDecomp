@@ -8,7 +8,7 @@ public class SmoothFollow2D : MonoBehaviour
 
 	public float smoothTime;
 
-	private Transform thisTransform;
+	//private Transform thisTransform;
 
 	private Vector2 velocity;
 
@@ -19,19 +19,19 @@ public class SmoothFollow2D : MonoBehaviour
 
 	public virtual void Start()
 	{
-		thisTransform = transform;
+		//thisTransform = transform;
 	}
 
 	public virtual void Update()
 	{
-		float x = Mathf.SmoothDamp(thisTransform.position.x, target.position.x, ref velocity.x, smoothTime);
-		Vector3 position = thisTransform.position;
-		float num = (position.x = x);
-		Vector3 vector2 = (thisTransform.position = position);
-		float y = Mathf.SmoothDamp(thisTransform.position.y, target.position.y, ref velocity.y, smoothTime);
-		Vector3 position2 = thisTransform.position;
-		float num2 = (position2.y = y);
-		Vector3 vector4 = (thisTransform.position = position2);
+		//float x = Mathf.SmoothDamp(thisTransform.position.x, target.position.x, ref velocity.x, smoothTime);
+		//Vector3 position = thisTransform.position;
+		//float num = (position.x = x);
+		//Vector3 vector2 = (thisTransform.position = position);
+		//float y = Mathf.SmoothDamp(thisTransform.position.y, target.position.y, ref velocity.y, smoothTime);
+		//Vector3 position2 = thisTransform.position;
+		//float num2 = (position2.y = y);
+		//Vector3 vector4 = (thisTransform.position = position2);
 	}
 
 	public virtual void Main()

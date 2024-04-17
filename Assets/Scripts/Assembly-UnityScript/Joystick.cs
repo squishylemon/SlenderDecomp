@@ -34,7 +34,7 @@ public class Joystick : MonoBehaviour
 
 	private float fingerDownTime;
 
-	private float firstDeltaTime;
+	//private float firstDeltaTime;
 
 	private GUITexture gui;
 
@@ -50,7 +50,7 @@ public class Joystick : MonoBehaviour
 	{
 		deadZone = Vector2.zero;
 		lastFingerId = -1;
-		firstDeltaTime = 0.5f;
+		//firstDeltaTime = 0.5f;
 		guiBoundary = new Boundary();
 	}
 
@@ -60,14 +60,14 @@ public class Joystick : MonoBehaviour
 		defaultRect = gui.pixelInset;
 		defaultRect.x += transform.position.x * (float)Screen.width;
 		defaultRect.y += transform.position.y * (float)Screen.height;
-		float x = 0f;
-		Vector3 vector = transform.position;
-		float num = (vector.x = x);
-		Vector3 vector3 = (transform.position = vector);
-		float y = 0f;
-		Vector3 vector4 = transform.position;
-		float num2 = (vector4.y = y);
-		Vector3 vector6 = (transform.position = vector4);
+		//float x = 0f;
+		//Vector3 vector = transform.position;
+		//float num = (vector.x = x);
+		//Vector3 vector3 = (transform.position = vector);
+		//float y = 0f;
+		//Vector3 vector4 = transform.position;
+		//float num2 = (vector4.y = y);
+		//Vector3 vector6 = (transform.position = vector4);
 		if (touchPad)
 		{
 			if ((bool)gui.texture)
@@ -88,7 +88,7 @@ public class Joystick : MonoBehaviour
 
 	public virtual void Disable()
 	{
-		gameObject.active = false;
+		gameObject.SetActive(false);
 		enumeratedJoysticks = false;
 	}
 
@@ -97,13 +97,13 @@ public class Joystick : MonoBehaviour
 		gui.pixelInset = defaultRect;
 		lastFingerId = -1;
 		position = Vector2.zero;
-		Vector2 zero = Vector2.zero;
+		//Vector2 zero = Vector2.zero;
 		if (touchPad)
 		{
-			float a = 0.025f;
-			Color color = gui.color;
-			float num = (color.a = a);
-			Color color3 = (gui.color = color);
+			//float a = 0.025f;
+			//Color color = gui.color;
+			//float num = (color.a = a);
+			//Color color3 = (gui.color = color);
 		}
 	}
 
@@ -145,7 +145,7 @@ public class Joystick : MonoBehaviour
 			for (int i = 0; i < touchCount; i++)
 			{
 				Touch touch = Input.GetTouch(i);
-				Vector2 vector = touch.position - guiTouchOffset;
+				//Vector2 vector = touch.position - guiTouchOffset;
 				bool flag = false;
 				if (touchPad)
 				{
@@ -162,13 +162,13 @@ public class Joystick : MonoBehaviour
 				{
 					if (touchPad)
 					{
-						float a = 0.15f;
-						Color color = gui.color;
-						float num = (color.a = a);
-						Color color3 = (gui.color = color);
+						//float a = 0.15f;
+						//Color color = gui.color;
+						//float num = (color.a = a);
+						//Color color3 = (gui.color = color);
 						lastFingerId = touch.fingerId;
 						fingerDownPos = touch.position;
-						fingerDownTime = Time.time;
+						//fingerDownTime = Time.time;
 					}
 					lastFingerId = touch.fingerId;
 					if (!(tapTimeWindow <= 0f))
@@ -203,14 +203,14 @@ public class Joystick : MonoBehaviour
 					}
 					else
 					{
-						float num2 = Mathf.Clamp(vector.x, guiBoundary.min.x, guiBoundary.max.x);
-						Rect pixelInset = gui.pixelInset;
-						float num4 = (pixelInset.x = num2);
-						Rect rect2 = (gui.pixelInset = pixelInset);
-						float num5 = Mathf.Clamp(vector.y, guiBoundary.min.y, guiBoundary.max.y);
-						Rect pixelInset2 = gui.pixelInset;
-						float num7 = (pixelInset2.y = num5);
-						Rect rect4 = (gui.pixelInset = pixelInset2);
+						//float num2 = Mathf.Clamp(vector.x, guiBoundary.min.x, guiBoundary.max.x);
+						//Rect pixelInset = gui.pixelInset;
+						//float num4 = (pixelInset.x = num2);
+						//Rect rect2 = (gui.pixelInset = pixelInset);
+						//float num5 = Mathf.Clamp(vector.y, guiBoundary.min.y, guiBoundary.max.y);
+						//Rect pixelInset2 = gui.pixelInset;
+						//float num7 = (pixelInset2.y = num5);
+						//Rect rect4 = (gui.pixelInset = pixelInset2);
 					}
 					if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
 					{

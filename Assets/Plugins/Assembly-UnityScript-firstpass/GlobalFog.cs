@@ -84,8 +84,8 @@ public class GlobalFog : PostEffectsBase
 		CAMERA_FOV = GetComponent<Camera>().fieldOfView;
 		CAMERA_ASPECT_RATIO = GetComponent<Camera>().aspect;
 		Matrix4x4 identity = Matrix4x4.identity;
-		Vector4 vector = default(Vector4);
-		Vector3 vector2 = default(Vector3);
+		//Vector4 vector = default(Vector4);
+		//Vector3 vector2 = default(Vector3);
 		float num = CAMERA_FOV * 0.5f;
 		Vector3 vector3 = GetComponent<Camera>().transform.right * CAMERA_NEAR * Mathf.Tan(num * ((float)Math.PI / 180f)) * CAMERA_ASPECT_RATIO;
 		Vector3 vector4 = GetComponent<Camera>().transform.up * CAMERA_NEAR * Mathf.Tan(num * ((float)Math.PI / 180f));

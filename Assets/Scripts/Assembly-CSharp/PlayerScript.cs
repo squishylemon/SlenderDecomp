@@ -292,7 +292,8 @@ public class PlayerScript : MonoBehaviour
 			}
 			if (startgame.gamestarted)
 			{
-				Screen.lockCursor = true;
+				Cursor.lockState = CursorLockMode.Locked;
+				Cursor.visible = false;
 			}
 		}
 		else if (Input.GetKeyDown("escape"))

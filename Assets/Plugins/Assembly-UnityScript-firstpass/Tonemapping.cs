@@ -176,7 +176,7 @@ public class Tonemapping : PostEffectsBase
 			Graphics.Blit(source, destination, tonemapMaterial, 7);
 			return;
 		}
-		bool flag = CreateInternalRenderTexture();
+		//bool flag = CreateInternalRenderTexture();
 		RenderTexture temporary = RenderTexture.GetTemporary((int)adaptiveTextureSize, (int)adaptiveTextureSize, 0, RenderTextureFormat.ARGBHalf);
 		Graphics.Blit(source, temporary);
 		int num = (int)Mathf.Log((float)temporary.width * 1f, 2f);
@@ -187,7 +187,7 @@ public class Tonemapping : PostEffectsBase
 			array[i] = RenderTexture.GetTemporary(temporary.width / num2, temporary.width / num2, 0, RenderTextureFormat.ARGBHalf);
 			num2 *= 2;
 		}
-		float num3 = (float)source.width * 1f / ((float)source.height * 1f);
+		//float num3 = (float)source.width * 1f / ((float)source.height * 1f);
 		RenderTexture source2 = array[num - 1];
 		Graphics.Blit(temporary, array[0], tonemapMaterial, 1);
 		if (type == TonemapperType.AdaptiveReinhardAutoWhite)

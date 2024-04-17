@@ -150,10 +150,10 @@ public class ThirdPersonCamera : MonoBehaviour
 		Quaternion quaternion = Quaternion.Euler(0f, y2, 0f);
 		cameraTransform.position = vector;
 		cameraTransform.position += quaternion * Vector3.back * distance;
-		float y4 = y3;
-		Vector3 position = cameraTransform.position;
-		float num3 = (position.y = y4);
-		Vector3 vector3 = (cameraTransform.position = position);
+		//float y4 = y3;
+		//Vector3 position = cameraTransform.position;
+		//float num3 = (position.y = y4);
+		//Vector3 vector3 = (cameraTransform.position = position);
 		SetUpRotation(vector, headPos);
 	}
 

@@ -51,7 +51,7 @@ public class AmbientScript : MonoBehaviour
 			{
 				return;
 			}
-			int num = 0;
+			//int num = 0;
 			timer = (int)(Random.value * 500f) + 100;
 			switch ((intro.timer >= 1700) ? ((int)(Random.value * 9f) + 1) : ((int)(Random.value * 8f) + 1))
 			{

@@ -250,7 +250,7 @@ public class TapControl : MonoBehaviour
 					}
 					if (touchCount == 1)
 					{
-						Vector2 vector = touch.position - fingerDownPosition[0];
+						//Vector2 vector = touch.position - fingerDownPosition[0];
 						if (touch.fingerId == fingerDown[0] && (Time.time > firstTouchTime + minimumTimeUntilMove || touch.phase == TouchPhase.Ended))
 						{
 							state = ControlState.MovingCharacter;
@@ -361,10 +361,10 @@ public class TapControl : MonoBehaviour
 
 	public virtual void LateUpdate()
 	{
-		float y = Mathf.SmoothDampAngle(cameraPivot.eulerAngles.y, rotationTarget, ref rotationVelocity, 0.3f);
-		Vector3 eulerAngles = cameraPivot.eulerAngles;
-		float num = (eulerAngles.y = y);
-		Vector3 vector2 = (cameraPivot.eulerAngles = eulerAngles);
+		//float y = Mathf.SmoothDampAngle(cameraPivot.eulerAngles.y, rotationTarget, ref rotationVelocity, 0.3f);
+		//Vector3 eulerAngles = cameraPivot.eulerAngles;
+		//float num = (eulerAngles.y = y);
+		//Vector3 vector2 = (cameraPivot.eulerAngles = eulerAngles);
 	}
 
 	public virtual void Main()

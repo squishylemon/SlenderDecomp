@@ -239,7 +239,7 @@ public class ThirdPersonController : MonoBehaviour
 	{
 		if (isControllable)
 		{
-			bool button = Input.GetButton("Jump");
+			//bool button = Input.GetButton("Jump");
 			if (jumping && !jumpingReachedApex && !(verticalSpeed > 0f))
 			{
 				jumpingReachedApex = true;
@@ -266,7 +266,7 @@ public class ThirdPersonController : MonoBehaviour
 		jumping = true;
 		jumpingReachedApex = false;
 		lastJumpTime = Time.time;
-		lastJumpStartHeight = transform.position.y;
+		//lastJumpStartHeight = transform.position.y;
 		lastJumpButtonTime = -10f;
 		_characterState = CharacterState.Jumping;
 	}

@@ -230,8 +230,8 @@ public class CharacterMotor : MonoBehaviour
 			{
 				if (!movingPlatform.newPlatform)
 				{
-					Vector3 platformVelocity = movingPlatform.platformVelocity;
-					movingPlatform.platformVelocity = (movingPlatform.activePlatform.localToWorldMatrix.MultiplyPoint3x4(movingPlatform.activeLocalPoint) - movingPlatform.lastMatrix.MultiplyPoint3x4(movingPlatform.activeLocalPoint)) / Time.deltaTime;
+					//Vector3 platformVelocity = movingPlatform.platformVelocity;
+					//movingPlatform.platformVelocity = (movingPlatform.activePlatform.localToWorldMatrix.MultiplyPoint3x4(movingPlatform.activeLocalPoint) - movingPlatform.lastMatrix.MultiplyPoint3x4(movingPlatform.activeLocalPoint)) / Time.deltaTime;
 				}
 				movingPlatform.lastMatrix = movingPlatform.activePlatform.localToWorldMatrix;
 				movingPlatform.newPlatform = false;

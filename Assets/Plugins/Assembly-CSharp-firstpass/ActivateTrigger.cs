@@ -49,7 +49,7 @@ public class ActivateTrigger : MonoBehaviour
 			}
 			break;
 		case Mode.Activate:
-			gameObject.active = true;
+			gameObject.SetActive(true);
 			break;
 		case Mode.Enable:
 			if (behaviour != null)
@@ -61,7 +61,7 @@ public class ActivateTrigger : MonoBehaviour
 			gameObject.GetComponent<Animation>().Play();
 			break;
 		case Mode.Deactivate:
-			gameObject.active = false;
+			gameObject.SetActive(false);
 			break;
 		}
 	}

@@ -84,7 +84,8 @@ public class IntroScript : MonoBehaviour
 		sk6.enableEmission = true;
 		sk7.enableEmission = true;
 		sk8.enableEmission = true;
-		Screen.lockCursor = false;
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible =true;
 		view.fadeoutgui = 400;
 		mainview.enabled = false;
 		base.GetComponent<Camera>().enabled = true;
@@ -281,7 +282,8 @@ public class IntroScript : MonoBehaviour
 			{
 				view.flashlight.Play();
 				gamestarted = true;
-				Screen.lockCursor = false;
+				Cursor.lockState = CursorLockMode.None;
+				Cursor.visible = true;
 				entry = Random.Range(4, 16);
 				if (view.mh)
 				{
@@ -501,7 +503,7 @@ public class IntroScript : MonoBehaviour
 			}
 			else
 			{
-				bool flag = false;
+				//bool flag = false;
 				if (GUI.Toggle(new Rect(210f, 150f, 180f, 20f), false, "Flashlight"))
 				{
 					view.flashlight.Play();
@@ -517,7 +519,7 @@ public class IntroScript : MonoBehaviour
 				}
 				else
 				{
-					bool flag = false;
+					//bool flag = false;
 					if (GUI.Toggle(new Rect(210f, 175f, 180f, 20f), false, "Glowstick"))
 					{
 						view.flashlight.Play();
@@ -531,7 +533,7 @@ public class IntroScript : MonoBehaviour
 				}
 				else
 				{
-					bool flag = false;
+					//bool flag = false;
 					if (GUI.Toggle(new Rect(210f, 200f, 180f, 20f), false, "Crank Lantern"))
 					{
 						view.flashlight.Play();
