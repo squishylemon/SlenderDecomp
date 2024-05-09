@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: sketch8
-  m_Shader: {fileID: 4800000, guid: 5a8474d9335b3904e8e670a9b378b517, type: 3}
+  m_Shader: {fileID: 4800000, guid: f9dfdc5b7b34f9c4d8badb2e1c5e61fe, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -31,3 +31,7 @@ Material:
         first:
           name: _TintColor
         second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .713235259, g: .713235259, b: .713235259, a: 0}
