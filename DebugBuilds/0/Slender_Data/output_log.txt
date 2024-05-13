@@ -18,7 +18,7 @@ Platform assembly: C:\Users\alex\SlenderProject\ExportedProject\SlenderOpenSourc
 Loading C:\Users\alex\SlenderProject\ExportedProject\SlenderOpenSource\DebugBuilds\0\Slender_Data\Managed\Boo.Lang.dll into Unity Child Domain
 Platform assembly: C:\Users\alex\SlenderProject\ExportedProject\SlenderOpenSource\DebugBuilds\0\Slender_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 Loading C:\Users\alex\SlenderProject\ExportedProject\SlenderOpenSource\DebugBuilds\0\Slender_Data\Managed\UnityScript.Lang.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+- Completed reload, in  0.402 seconds
 desktop: 3840x1080 144Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -26,4 +26,12 @@ desktop: 3840x1080 144Hz; virtual: 3840x1080 at 0,0
 Platform assembly: C:\Users\alex\SlenderProject\ExportedProject\SlenderOpenSource\DebugBuilds\0\Slender_Data\Managed\System.Core.dll (this message is harmless)
 Shader 'Hidden/TerrainEngine/Splatmap/Specular-Base': fallback shader 'Legacy Shaders/Specular' not found
 Shader 'Hidden/TerrainEngine/Splatmap/Specular-Base': fallback shader 'Legacy Shaders/Specular' not found
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.551300 ms
+System memory in use before: 66.4 MB.
+System memory in use after: 66.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1825.
+Total: 0.582000 ms (FindLiveObjects: 0.030000 ms CreateObjectMapping: 0.016800 ms MarkObjects: 0.461300 ms  DeleteObjects: 0.073300 ms)
+
 Waiting for finish
