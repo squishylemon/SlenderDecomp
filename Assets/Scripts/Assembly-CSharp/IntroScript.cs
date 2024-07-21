@@ -673,6 +673,7 @@ public class IntroScript : MonoBehaviour
         view.fadeoutgui = 0;
         if (!view.daytime)
         {
+            sun.enabled = false;
             if (!view.mh)
             {
                 flashlight.Play();

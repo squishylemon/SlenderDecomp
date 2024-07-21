@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0, g: 0, b: 0, a: 0}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SkyboxMaterial: {fileID: 2100000, guid: 88cb332659ea52d4b8ae5faf6e46c777, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -36,7 +36,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1310}
 --- !u!127 &21
 LevelGameManager:
   m_ObjectHideFlags: 0
@@ -53,7 +53,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 3
@@ -15810,7 +15810,7 @@ MeshRenderer:
   m_SubsetIndices: 2a000000
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 2
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
@@ -20477,7 +20477,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.42999995
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -20485,8 +20485,8 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
+    m_Bias: 2
+    m_NormalBias: 3
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 12100000, guid: 4fb66699372832e43a06b7a9b988b951, type: 2}
@@ -20494,8 +20494,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_BounceIntensity: 0
+  m_Lightmapping: 4
+  m_BounceIntensity: .150000006
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 0, y: 0}
@@ -20541,7 +20541,7 @@ Light:
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
+  m_Intensity: 8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -20558,7 +20558,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
