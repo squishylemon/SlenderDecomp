@@ -45,7 +45,7 @@ public class AmbientScript : MonoBehaviour
 	{
 		if ((intro.gamestarted && loser.timeleft == 0 && (!view.mh || (intro.timer >= 1600 && view.mh))) || (loser.timeleft > 250 && loser.timeleft < 900 && view.pages >= 8))
 		{
-			wind.volume = 1f;
+			wind.volume = 0.5f;
 			timer--;
 			if (timer > 0)
 			{
@@ -59,57 +59,57 @@ public class AmbientScript : MonoBehaviour
 			case 2:
 				if ((!view.lost && !view.daytime) || (view.lost && view.daytime))
 				{
-					AudioSource.PlayClipAtPoint(fs1, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs1, base.transform.position, 0.05f);
 				}
 				else
 				{
-					AudioSource.PlayClipAtPoint(fs8, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs8, base.transform.position, 0.05f);
 				}
 				break;
 			case 3:
 			case 4:
 				if ((!view.lost && !view.daytime) || (view.lost && view.daytime))
 				{
-					AudioSource.PlayClipAtPoint(fs2, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs2, base.transform.position, 0.05f);
 				}
 				else
 				{
-					AudioSource.PlayClipAtPoint(fs9, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs9, base.transform.position, 0.05f);
 				}
 				break;
 			case 5:
 			case 6:
 				if ((!view.lost && !view.daytime) || (view.lost && view.daytime))
 				{
-					AudioSource.PlayClipAtPoint(fs3, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs3, base.transform.position, 0.05f);
 				}
 				else
 				{
-					AudioSource.PlayClipAtPoint(fs10, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs10, base.transform.position, 0.05f);
 				}
 				break;
 			case 7:
 			case 8:
 				if ((!view.lost && !view.daytime) || (view.lost && view.daytime))
 				{
-					AudioSource.PlayClipAtPoint(fs4, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs4, base.transform.position, 0.05f);
 				}
 				else
 				{
-					AudioSource.PlayClipAtPoint(fs11, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs11, base.transform.position, 0.05f);
 				}
 				break;
 			case 9:
-				switch ((int)(Random.value * 3f))
+				switch ((int)(Random.value * 3f)+1)
 				{
 				case 0:
-					AudioSource.PlayClipAtPoint(fs5, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs5, base.transform.position, 0.05f);
 					break;
 				case 1:
-					AudioSource.PlayClipAtPoint(fs6, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs6, base.transform.position, 0.05f);
 					break;
 				case 2:
-					AudioSource.PlayClipAtPoint(fs7, base.transform.position, 1f);
+					AudioSource.PlayClipAtPoint(fs7, base.transform.position, 0.05f);
 					break;
 				}
 				break;
