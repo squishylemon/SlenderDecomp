@@ -53,7 +53,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 3
@@ -68,8 +68,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-  m_LightmapSnapshot: {fileID: 112000000, guid: f3dbb30f25e3e884684b1f27a7494491,
-    type: 2}
+  m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &23
 NavMeshSettings:
@@ -9964,7 +9963,7 @@ Camera:
     height: 1
   near clip plane: .00999999978
   far clip plane: 1000
-  field of view: 60
+  field of view: 54
   orthographic: 0
   orthographic size: 100
   m_Depth: 0
@@ -20445,7 +20444,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: .0313725509, g: .0313725509, b: .0470588244, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1.14999998
   m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -20477,16 +20476,16 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.42999995
+  m_Intensity: 2.22000003
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 2
-    m_NormalBias: 3
+    m_Strength: .769999981
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 12100000, guid: 4fb66699372832e43a06b7a9b988b951, type: 2}
@@ -20495,10 +20494,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 4
-  m_BounceIntensity: .150000006
+  m_BounceIntensity: 3.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_AreaSize: {x: 0, y: 0}
+  m_AreaSize: {x: 1, y: 1}
 --- !u!108 &1311
 Light:
   m_ObjectHideFlags: 0
@@ -31644,7 +31643,7 @@ Terrain:
   m_UseDefaultSmoothness: 1
   m_DefaultSmoothness: 1
   m_MaterialTemplate: {fileID: 0}
-  m_BakeLightProbesForTrees: 1
+  m_BakeLightProbesForTrees: 0
   m_ScaleInLightmap: 1
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &2085399554
