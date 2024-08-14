@@ -3,7 +3,7 @@
 This project aims to port the original *Slender: Eight Pages* game to a new Unity version, starting with **Unity 5.0.0f4**. This is the first version that I could get running without major UI changes. 
 
 ### Current Status:
-- The project is in a very primitive state and is currently not playable.
+- The project is currently nearly finised for **Unity 5.0.0f4**, All thats needed is to fix minor differences from offical such as brightness,lighting,material reflections etc
 - It is open source, allowing anyone to explore and experiment with it.
 
 ### Future Goals:
