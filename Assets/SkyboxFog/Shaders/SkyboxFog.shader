@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. 
 // Modified by Chris Cunningham to achieve fog blending effect.
 // MIT license (see license.txt)
@@ -61,9 +64,9 @@ Shader "Skybox/6 Sided Fog" {
         v2f vert (appdata_t v)
         {
             v2f o;
-            o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+            o.vertex = UnityObjectToClipPos(v.vertex);
             o.texcoord = v.texcoord;
-            o.wPos = mul(_Object2World, v.vertex).xyz; // Corrected line
+            o.wPos = mul(unity_ObjectToWorld, v.vertex).xyz; // Corrected line
             o.distanceToCamera = distance(_WorldSpaceCameraPos, o.wPos);
             return o;
         }

@@ -1,8 +1,9 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
-[RequireComponent(typeof(GUITexture))]
+[RequireComponent(typeof(Image))]
 public class Joystick : MonoBehaviour
 {
 	[NonSerialized]
@@ -36,11 +37,11 @@ public class Joystick : MonoBehaviour
 
 	//private float firstDeltaTime;
 
-	private GUITexture gui;
+	private Image guiImage;
 
-	private Rect defaultRect;
+	private RectTransform defaultRect;
 
-	private Boundary guiBoundary;
+	private Rect guiBoundary;
 
 	private Vector2 guiTouchOffset;
 
@@ -51,42 +52,50 @@ public class Joystick : MonoBehaviour
 		deadZone = Vector2.zero;
 		lastFingerId = -1;
 		//firstDeltaTime = 0.5f;
-		guiBoundary = new Boundary();
+		guiBoundary = new Rect();
 	}
 
-	public virtual void Start()
+	void Start()
 	{
-		gui = (GUITexture)GetComponent(typeof(GUITexture));
-		defaultRect = gui.pixelInset;
-		defaultRect.x += transform.position.x * (float)Screen.width;
-		defaultRect.y += transform.position.y * (float)Screen.height;
-		//float x = 0f;
-		//Vector3 vector = transform.position;
-		//float num = (vector.x = x);
-		//Vector3 vector3 = (transform.position = vector);
-		//float y = 0f;
-		//Vector3 vector4 = transform.position;
-		//float num2 = (vector4.y = y);
-		//Vector3 vector6 = (transform.position = vector4);
+		// Get the Image and RectTransform components
+		guiImage = GetComponent<Image>();
+		defaultRect = GetComponent<RectTransform>();
+
+		// Positioning the RectTransform relative to screen size
+		defaultRect.anchoredPosition = new Vector2(
+			defaultRect.anchoredPosition.x + transform.position.x * Screen.width,
+			defaultRect.anchoredPosition.y + transform.position.y * Screen.height
+		);
+
+		// Handle touchPad setup
 		if (touchPad)
 		{
-			if ((bool)gui.texture)
+			if (guiImage != null && guiImage.sprite != null) // Assuming sprite is used instead of texture in UI
 			{
-				touchZone = defaultRect;
+				touchZone = new Rect(
+					defaultRect.anchoredPosition.x,
+					defaultRect.anchoredPosition.y,
+					defaultRect.rect.width,
+					defaultRect.rect.height
+				);
 			}
 			return;
 		}
-		guiTouchOffset.x = defaultRect.width * 0.5f;
-		guiTouchOffset.y = defaultRect.height * 0.5f;
-		guiCenter.x = defaultRect.x + guiTouchOffset.x;
-		guiCenter.y = defaultRect.y + guiTouchOffset.y;
-		guiBoundary.min.x = defaultRect.x - guiTouchOffset.x;
-		guiBoundary.max.x = defaultRect.x + guiTouchOffset.x;
-		guiBoundary.min.y = defaultRect.y - guiTouchOffset.y;
-		guiBoundary.max.y = defaultRect.y + guiTouchOffset.y;
+
+		// Set up touch offset and boundaries
+		guiTouchOffset = new Vector2(defaultRect.rect.width * 0.5f, defaultRect.rect.height * 0.5f);
+		guiCenter = new Vector2(defaultRect.anchoredPosition.x + guiTouchOffset.x, defaultRect.anchoredPosition.y + guiTouchOffset.y);
+
+		// Defining the boundaries for touch input
+		guiBoundary = new Rect(
+            defaultRect.anchoredPosition.x - guiTouchOffset.x,
+			defaultRect.anchoredPosition.y - guiTouchOffset.y,
+			defaultRect.rect.width,
+            defaultRect.rect.height
+		);
 	}
 
-	public virtual void Disable()
+    public virtual void Disable()
 	{
 		gameObject.SetActive(false);
 		enumeratedJoysticks = false;
@@ -94,7 +103,7 @@ public class Joystick : MonoBehaviour
 
 	public virtual void ResetJoystick()
 	{
-		gui.pixelInset = defaultRect;
+		guiImage.rectTransform.anchoredPosition = defaultRect.anchoredPosition;
 		lastFingerId = -1;
 		position = Vector2.zero;
 		//Vector2 zero = Vector2.zero;
@@ -154,10 +163,10 @@ public class Joystick : MonoBehaviour
 						flag = true;
 					}
 				}
-				else if (gui.HitTest(touch.position))
-				{
-					flag = true;
-				}
+				//else if (gui.HitTest(touch.position))
+				//{
+				//	flag = true;
+				//}
 				if (flag && (lastFingerId == -1 || lastFingerId != touch.fingerId))
 				{
 					if (touchPad)
@@ -221,8 +230,8 @@ public class Joystick : MonoBehaviour
 		}
 		if (!touchPad)
 		{
-			position.x = (gui.pixelInset.x + guiTouchOffset.x - guiCenter.x) / guiTouchOffset.x;
-			position.y = (gui.pixelInset.y + guiTouchOffset.y - guiCenter.y) / guiTouchOffset.y;
+			//position.x = (gui.pixelInset.x + guiTouchOffset.x - guiCenter.x) / guiTouchOffset.x;
+			//position.y = (gui.pixelInset.y + guiTouchOffset.y - guiCenter.y) / guiTouchOffset.y;
 		}
 		float num8 = Mathf.Abs(position.x);
 		float num9 = Mathf.Abs(position.y);

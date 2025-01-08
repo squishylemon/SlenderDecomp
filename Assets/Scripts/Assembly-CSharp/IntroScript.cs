@@ -6,6 +6,8 @@ public class IntroScript : MonoBehaviour
 
     public GUIStyle credits;
 
+    public GameObject MainMenuObject;
+
     public Camera mainview;
 
     public Transform spotlight;

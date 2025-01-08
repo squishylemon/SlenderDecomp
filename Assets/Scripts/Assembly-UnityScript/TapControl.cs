@@ -8,7 +8,7 @@ public class TapControl : MonoBehaviour
 
 	public Transform cameraPivot;
 
-	public GUITexture jumpButton;
+	//public GUITexture jumpButton;
 
 	public float speed;
 
@@ -140,25 +140,25 @@ public class TapControl : MonoBehaviour
 		if (touchCount == 1 && state == ControlState.MovingCharacter)
 		{
 			Touch touch = Input.GetTouch(0);
-			if (character.isGrounded && jumpButton.HitTest(touch.position))
-			{
-				velocity = character.velocity;
-				velocity.y = jumpSpeed;
-			}
-			else if (!jumpButton.HitTest(touch.position) && touch.phase != 0)
-			{
-				Ray ray = cam.ScreenPointToRay(new Vector3(touch.position.x, touch.position.y));
-				RaycastHit hitInfo = default(RaycastHit);
-				if (Physics.Raycast(ray, out hitInfo))
-				{
-					float magnitude = (transform.position - hitInfo.point).magnitude;
-					if (!(magnitude <= minimumDistanceToMove))
-					{
-						targetLocation = hitInfo.point;
-					}
-					moving = true;
-				}
-			}
+			//if (character.isGrounded && jumpButton.HitTest(touch.position))
+			//{
+			//	velocity = character.velocity;
+			//	velocity.y = jumpSpeed;
+			//}
+			//else if (!jumpButton.HitTest(touch.position) && touch.phase != 0)
+			//{
+			//	Ray ray = cam.ScreenPointToRay(new Vector3(touch.position.x, touch.position.y));
+			//	RaycastHit hitInfo = default(RaycastHit);
+			//	if (Physics.Raycast(ray, out hitInfo))
+			//	{
+			//		float magnitude = (transform.position - hitInfo.point).magnitude;
+			//		if (!(magnitude <= minimumDistanceToMove))
+			//		{
+			//			targetLocation = hitInfo.point;
+			//		}
+			//		moving = true;
+			//	}
+			//}
 		}
 		Vector3 motion = Vector3.zero;
 		if (moving)
